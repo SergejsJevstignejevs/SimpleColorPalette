@@ -1,0 +1,33 @@
+.ColorOptionsPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+
+    .ColorOption {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin: 25px 5px;
+
+      label {
+        font-size: 1em;
+      }
+
+      input {
+        width: 30%;
+        height: 30px;
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 1em;
+        text-align: center;
+      }
+
+    }
+}

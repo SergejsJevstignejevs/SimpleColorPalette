@@ -1,0 +1,15 @@
+.ColorPalette {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+
+    .ColorRow {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 10%;
+    }
+}
