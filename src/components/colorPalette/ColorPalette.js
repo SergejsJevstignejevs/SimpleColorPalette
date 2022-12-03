@@ -34,7 +34,7 @@ function fillArrayWithColor(array, redVelocity = 10, greenVelocity = 10, blueVel
 
         redNum = Math.max(redNum - redChange, 0);
         greenNum = Math.max(greenNum - greenChange, 0);
-        blueNum = Math.max(greenNum - blueChange, 0);
+        blueNum = Math.max(blueNum - blueChange, 0);
 
     }
 
