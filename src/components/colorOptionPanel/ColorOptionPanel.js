@@ -2,15 +2,25 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { changeRedVelocity, changeGreenVelocity, changeBlueVelocity } from '../../store/actions';
 
+import ColorCell from '../colorPalette/colorCell/ColorCell';
+
 import "./ColorOptionPanel.scss";
 
 function ColorOptionPanel() {
 
     const dispatch = useDispatch();
-    const { redVelocity, greenVelocity, blueVelocity} = useSelector(state => state.colorReducer);
+    const { redVelocity,
+            greenVelocity,
+            blueVelocity,
+            selectedColor } = useSelector(state => state.colorReducer);
 
     return (
         <div className="ColorOptionsPanel">
+            <div className="ColorOption">
+                <p>Selected color: </p>
+                <ColorCell color={selectedColor} />
+                <p>{selectedColor}</p>
+            </div>
             <div className="ColorOption">
                 <label htmlFor="RedVelocity">RedVelocity: </label>
                 <input 
@@ -58,7 +68,7 @@ function ColorOptionPanel() {
             </div>
             <div className="ColorOption">
                 <p className="PsNotion">
-                    P.S.: Color velocity - it is how fast color changes.
+                    P.S.: Color velocity - it is how fast color saturation changes.
                     Smaller the number - the faster will be changes.
                 </p>
             </div>

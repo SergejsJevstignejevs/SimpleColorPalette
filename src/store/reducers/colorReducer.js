@@ -1,7 +1,8 @@
 const initialState = {
     redVelocity: 100,
     greenVelocity: 100,
-    blueVelocity: 100
+    blueVelocity: 100,
+    selectedColor: "#FFFFFF"
 }
 
 const colorReducer = (state = initialState, action) => {
@@ -23,6 +24,12 @@ const colorReducer = (state = initialState, action) => {
             return {
                 ...state,
                 blueVelocity: action.payload
+            }
+        } 
+        case "CHANGE_SELECTED_COLOR" : {
+            return {
+                ...state,
+                selectedColor: action.payload
             }
         }
         default: {

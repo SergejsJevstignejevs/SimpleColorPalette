@@ -18,3 +18,10 @@ export const changeBlueVelocity = (blueVelocity) => {
         payload: blueVelocity
     }
 }
+
+export const changeSelectedColor = (selectedColor) => {
+    return {
+        type: "CHANGE_SELECTED_COLOR",
+        payload: selectedColor
+    }
+}
